@@ -1,8 +1,10 @@
+from service.calendar.google_calendar import GoogleCalendar
 class Updater():
 
-    def update_event(self):
-        pass
+    def __init__(self):
+        self.calendar = GoogleCalendar()
 
     def update(self, all_events):
+        self.calendar.clear_calendar()
         for event in all_events:
-            update_event(event)
+            self.calendar.add_event_with_details(event)

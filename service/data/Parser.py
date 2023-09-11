@@ -97,7 +97,7 @@ class Parser:
         all_times = self.break_str(all_times_str)
 
         all_swimming_events = [self.parse_event(time) for time in all_times]
-        return all_swimming_events
+        return [event for event in all_swimming_events if event is not None]
 
 
 

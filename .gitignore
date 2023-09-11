@@ -1,2 +1,4 @@
 config/secret.yaml
 .idea/
+credentials.json
+token.pickle
