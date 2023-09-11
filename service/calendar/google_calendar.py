@@ -60,8 +60,8 @@ class GoogleCalendar:
     def clear_calendar(self):
         for event in self.calendar.get_events(datetime.datetime(datetime.datetime.now().year, 1, 1),
                                               datetime.datetime(datetime.datetime.now().year+1, 1, 1),
-                                              order_by='updated'):
+                                              order_by='updated', calendar_id=self.secret['calendar_id']):
             print("Deleting event "+str(event))
-            self.calendar.delete_event(event)
+            self.calendar.delete_event(event, calendar_id=self.secret['calendar_id'])
 
 
