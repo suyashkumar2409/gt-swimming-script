@@ -4,7 +4,7 @@ import yaml
 
 
 BASE_CONFIG  = "config/base.yaml"
-SECRET_CONFIG = "config/secret_template.yaml"
+SECRET_CONFIG = "config/secret.yaml"
 @lru_cache()
 def load_config(config_path=BASE_CONFIG):
     with open(config_path, encoding="utf-8_sig") as f:

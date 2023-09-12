@@ -2,3 +2,5 @@ config/secret.yaml
 .idea/
 credentials.json
 token.pickle
+__pycache__
+.DS_Store
