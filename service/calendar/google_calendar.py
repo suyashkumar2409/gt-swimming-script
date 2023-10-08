@@ -54,6 +54,7 @@ class GoogleCalendar:
                 end=swimming_event_with_day.end_time(),
                 description="McAuley Swimming pool is open with {} lanes".format(swimming_event_with_day.number_of_lanes()),
                 minutes_before_email_reminder=15,
+                timezone='America/New_York'
             )
             self.add_event(event)
 
